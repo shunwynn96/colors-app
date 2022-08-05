@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+}
+
+.navBtns{
+  align-self: flex-end;
+  margin-top: 0.8rem;
+  margin-right: 1rem;
+  & button {
+    margin: 0 0.5rem;
+  }
+}
+
+.appBar {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 64px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,49 @@
+@use "./screenSizes";
+
+:global {
+  .singleColorPalette {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    & .ColorBox {
+      height: 50%;
+      @media (max-width: screenSizes.$xl) {
+        height: 33.3333%;
+      }
+      @media (max-width: screenSizes.$lg) {
+        height: 20%;
+      }
+      @media (max-width: screenSizes.$sm) {
+        height: 10%;
+      }
+    }
+  } 
+  
+}
+
+.paletteColors {
+  height: 90%;
+}
+
+.goBack {
+  background-color: black;
+}
+
+.backBtn {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -15px;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+}

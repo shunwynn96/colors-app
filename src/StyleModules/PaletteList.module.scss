@@ -1,0 +1,75 @@
+
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1600px;
+
+:global {
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+  }
+}
+
+.root {
+  background-color: blue;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #1e8feb;
+  background-image: url("../../public/confetti-doodles.svg");
+  /* background by SVGBackgrounds.com */
+  @media (max-width: $breakpoint-xs) {
+    height: unset;
+  }
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media (max-width: $breakpoint-xl) {
+    width: 80%;
+  }
+  @media (max-width: $breakpoint-xs) {
+    width: 75%;
+  }
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.palettes {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 50%);
+  }
+  @media (max-width: $breakpoint-xs) {
+    grid-template-columns: repeat(1, 100%);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+}
+
