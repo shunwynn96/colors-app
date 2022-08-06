@@ -45,7 +45,7 @@ function PaletteList(props) {
     <div className={style.root}>
       <div className={style.container}>
         <nav className={style.nav}>
-          <h1>React Colors</h1>
+          <h1>Color Picker</h1>
           <Link to="/palette/new">
             <Button variant="contained" color="success">
               Create Palette
